@@ -1,2 +1,1 @@
-# SQL
-completed sql tasks
+# Homework #1
