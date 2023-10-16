@@ -1,5 +1,5 @@
 # Homework #1
-1. Create table "employees" with following DDL:
+## 1. Create table "employees" with following DDL:
 - id. serial,  primary key,
 - employee_name. Varchar(50), not null
   ```
@@ -8,7 +8,7 @@
   employee_name varchar (50) not null);
   ```
    
-2. Insert 70 values in the employees table
+## 2. Insert 70 values in the employees table
 ```   
 INSERT INTO employees (employee_name)
 VALUES 
@@ -84,7 +84,7 @@ VALUES
     ('Emily Powell');
 ```
 
-3. Create table 'salary' with following DDL:
+## 3. Create table 'salary' with following DDL:
 ```
 - id. Serial  primary key,   
 - monthly_salary. Int, not null
@@ -95,7 +95,7 @@ create table salary (
    monthly_salary int not null);   
 ```
 
-4. Insert 16 entries in the salary table
+## 4. Insert 16 entries in the salary table
 ```
 INSERT INTO salary (monthly_salary)
 values
@@ -117,7 +117,7 @@ values
 		(2500);
 ```
 
-5. Create table 'employee_salary' with following DDL:
+## 5. Create table 'employee_salary' with following DDL:
 ```
 - id. Serial  primary key,
 - employee_id. Int, not null, unique
@@ -129,7 +129,7 @@ create table employee_salary(
 	 employee_id int not null,   
 	 salary_id int not null);   
 ```
-6. Insert values in 'employee_salary' table
+## 6. Insert values in 'employee_salary' table
 ```
 insert into employee_salary(employee_id,salary_id)
 	 values (1, 1),
@@ -174,7 +174,7 @@ insert into employee_salary(employee_id,salary_id)
     		(80, 9);  -- Non-existent employee_id
 ```
 
-7. Create table 'roles' with following DDL:
+## 7. Create table 'roles' with following DDL:
 ```
 - id. Serial  primary key,
 - role_name. int, not null, unique
@@ -184,13 +184,14 @@ create table roles(
   id serial primary key,   
   role_name int unique not null);   
 ```
-8. Change the type of the role_name column from int to varchar(30)
+
+## 8. Change the type of the role_name column from int to varchar(30)
 ```
 alter table roles
 alter column role_name type varchar(30);
 ```
 
-9. Insert the roles table with 20 rows
+## 9. Insert the roles table with 20 rows
 ```
 insert into roles(role_name)
     values 
@@ -215,7 +216,8 @@ insert into roles(role_name)
     		('Middle Automation QA engineer'),
     		('Senior Automation QA engineer');
 ```
-10. Create table 'roles_employee' with following DDL:
+
+## 10. Create table 'roles_employee' with following DDL:
 ```
 id. Serial  primary key,
 - employee_id. Int, not null, unique (foreign key for table employees, field id)
@@ -230,7 +232,7 @@ id. Serial  primary key,
     foreign key (role_id) references roles(id));
 ```
 
-11. Insert the roles_employee table with 40 rows
+## 11. Insert the roles_employee table with 40 rows
 ```
 insert into roles_employee(employee_id,role_id)
     values
