@@ -234,7 +234,7 @@ id. Serial  primary key,
 ```
 insert into roles_employee(employee_id,role_id)
     values
-    		(7, 2),
+    		    (7, 2),
 		    (20, 4),
 		    (3, 9),
 		    (5, 13),
