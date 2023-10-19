@@ -54,3 +54,53 @@ where created_on = '2021-03-26 00:00:00';
 SELECT * FROM students
 WHERE name like 'Anna';
 ```
+## 11. Show all users of the table 'Students' which names contain "8" in the end of the name
+```
+SELECT * FROM students
+WHERE name LIKE '%8';
+```
+## 12. Show all users of the table 'students' which names contain "a"
+```
+SELECT * FROM users
+WHERE name LIKE '%a%';
+```
+## 13. Show all users of the table 'students' which were created on 2021-07-12 00:00:00
+```
+SELECT * from students
+WHERE created_on = '2021-07-12 00:00:00';
+```
+## 14. Show all users of the table 'students' which were created on 2021-07-12 00:00:00 and have password 1m313
+```
+SELECT * from students
+WHERE created_on = '2021-07-12 00:00:00' and passwor = '1m313';
+```
+## 15. Show all users of the table 'students' which were created on 2021-07-12 00:00:00 and name contained "Andrey"
+```
+SELECT * from students
+WHERE created_on = '2021-07-12 00:00:00' and name LIKE '%Andrey%';
+```
+## 16. Show all users of the table 'students' which were created on 2021-07-12 00:00:00 and name contained "8"
+```
+SELECT * from students
+WHERE created_on = '2021-07-12 00:00:00' and name LIKE '%8%';
+```
+## 17. Show user of the table 'students' which have id = 110
+```
+SELECT id, name FROM stedents
+WHERE id = '110';
+```
+## 18. Show user of the table 'Students' which have id = 153
+```
+SELECT id, name FROM stedents
+WHERE id = '153';
+```
+## 19. Show users of the table 'Students' which have id > 140
+```
+SELECT id, name FROM stedents
+WHERE id > '140';
+```
+## 20. Show users of the table 'students' which have id < 130
+```
+SELECT id, name FROM stedents
+WHERE id < '130';
+```
