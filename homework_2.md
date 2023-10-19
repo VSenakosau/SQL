@@ -27,4 +27,4 @@ SELECT id FROM students;
 ```
 SELECT name FROM students;
 ```
-## 5.
+## 5. Show all emails of the table 'Students'
