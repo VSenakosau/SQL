@@ -35,12 +35,22 @@ SELECT email FROM students;
 ```
 SELECT name, email from students;
 ```
-## 7. Show all ids, names, emails, dates of creation of the table 'Students'
+## 7. Show all ids, names, emails, dates of creation of the table 'students'
 ```
 SELECT id, name, email, created_on FROM students;
 ```
-## 8. Show all users of the table 'Students' with password 12333
+## 8. Show all users of the table 'students' with password 12333
 ```
 select * from students
 where password = '12333';
+```
+## 9. Show all users of the table 'students' which were created_on 2021-03-26 00:00:00
+```
+SELECT * FROM students
+where created_on = '2021-03-26 00:00:00';
+```
+## 10. Show all users of the table 'students' which names contain "Anna"
+```
+SELECT * FROM students
+WHERE name like 'Anna';
 ```
