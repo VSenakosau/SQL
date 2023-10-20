@@ -20,7 +20,7 @@ SELECT employee_name, monthly_salary
 FROM employees e, salary s, employee_salary es 
 WHERE e.id = es.employee_id  AND s.id = es.salary_id AND monthly_salary < 2000;
 ```
-## 3. Display all salary positions, but no employee has been assigned to them. (There is a salary, but it is unclear who gets it.)
+## 3. Display all salary positions, but no employee has been assigned to them. (There is a salary, but it is unclear who gets it.)   
 ```
 SELECT monthly_salary,employee_name
 FROM salary
