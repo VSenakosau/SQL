@@ -28,3 +28,19 @@ LEFT JOIN employee_salary ON salary.id = employee_salary.salary_id
 LEFT JOIN employees ON employee_salary.employee_id = employees.id
 WHERE employees.employee_name is null;
 ```
+## 4. Display all salary positions less than 2000, but no employee has been assigned to them. (There is a PO, but it is unclear who gets it.)
+```
+SELECT monthly_salary,employee_name
+FROM salary
+LEFT JOIN employee_salary ON salary.id = employee_salary.salary_id
+LEFT JOIN employees ON employee_salary.employee_id = employees.id
+WHERE employees.employee_name IS null and salary.monthly_salary < 2000;
+```
+## 5. Show all employees who doesn't have salary
+```
+SELECT employee_name, monthly_salary
+FROM employees
+LEFT JOIN employee_salary ON employees.id = employee_salary.employee_id
+LEFT JOIN salary ON salaru.id = employee_salary.salary_id
+WHERE salary.monthly_salary is NULL;
+```
