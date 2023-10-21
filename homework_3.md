@@ -270,4 +270,25 @@ JOIN roles ON roles.id = roles_employee.role_id
 WHERE monthly_salary between 1700 and 2300
 ORDER BY monthly_salary ASC;
 ```
-## 31.
+## 31. Show names, roles and salary of all specialists in ascending order for workers with salary less than 2300
+```
+SELECT employee_name, role_name, monthly_salary
+FROM employees
+JOIN employee_salary ON employees.id = employee_salary.employee_id
+JOIN salary ON salary.id = employee_salary.salary_id
+JOIN roles_employee ON employee_salary.employee_id = roles_employee.employee_id
+JOIN roles ON roles.id = roles_employee.role_id
+WHERE monthly_salary < 2300
+ORDER BY monthly_salary ASC;
+```
+## 32. Show names, roles and salary of all specialists in ascending order for workers with salary equal to 1100, 1500, 2000
+```
+SELECT employee_name, role_name, monthly_salary
+FROM employees
+JOIN employee_salary ON employees.id = employee_salary.employee_id
+JOIN salary ON salary.id = employee_salary.salary_id
+JOIN roles_employee ON employee_salary.employee_id = roles_employee.employee_id
+JOIN roles ON roles.id = roles_employee.role_id
+WHERE monthly_salary in (1100, 1500,2000)
+ORDER BY monthly_salary ASC;
+```
