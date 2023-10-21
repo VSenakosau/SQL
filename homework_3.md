@@ -44,3 +44,60 @@ LEFT JOIN employee_salary ON employees.id = employee_salary.employee_id
 LEFT JOIN salary ON salaru.id = employee_salary.salary_id
 WHERE salary.monthly_salary is NULL;
 ```
+## 6. Show all workers with their roles
+```
+SELECT employee_name, role_name
+FROM employees
+JOIN roles_employee ON employees.id = roles_employee.employee_id
+JOIN roles ON roles.id = roles_employee.role_id
+```
+## 7. Show names, roles only for Java developers
+```
+SELECT employee_name, role_name
+FROM employees
+JOIN roles_employee ON employees.id = roles_employee.employee_id
+JOIN roles ON roles.id = roles_employee.role_id
+WHERE roles.role_name like '%Java%';
+```
+## 8. Show names, roles only for Python developers
+```
+SELECT employee_name, role_name
+FROM employees
+JOIN roles_employee ON employees.id = roles_employee.employee_id
+JOIN roles ON roles.id = roles_employee.role_id
+WHERE roles.role_name like '%Python%';
+```
+## 9. Show names, roles only for QA engineers
+```
+SELECT employee_name, role_name
+FROM employees
+JOIN roles_employee ON employees.id = roles_employee.employee_id
+JOIN roles ON roles.id = roles_employee.role_id
+WHERE roles.role_name like '%QA%';
+```
+## 10. Show names, roles only for Manual QA engineers
+```
+SELECT employee_name, role_name
+FROM employees
+JOIN roles_employee ON employees.id = roles_employee.employee_id
+JOIN roles ON roles.id = roles_employee.role_id
+WHERE roles.role_name like '%Manual QA%';
+```
+## 11. Show names, roles only for Automation QA engineers
+```
+SELECT employee_name, role_name
+FROM employees
+JOIN roles_employee ON employees.id = roles_employee.employee_id
+JOIN roles ON roles.id = roles_employee.role_id
+WHERE roles.role_name like '%Automation QA%';
+```
+## 12. Show names, roles, salary only for Junior specialists
+SELECT employee_name, monthly_salary, role_name
+FROM employees
+JOIN employee_salary ON employees.id = employee_salary.employee_id
+JOIN salary ON salary.id = employee_salary.salary_id
+JOIN roles_employee ON roles_employee.employee_id = employee_salary.employee_id
+JOIN roles ON roles.id = roles_employee.role_id
+WHERE roles.role_name like '%Junior%';
+
+## 13. 
